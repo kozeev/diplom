@@ -1,0 +1,48 @@
+﻿<Window x:Class="kursovaya.WorkloadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Распределение нагрузки" Height="500" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Label Content="Преподаватель:" VerticalAlignment="Center"/>
+            <TextBox x:Name="TeacherFilter" Width="150" Margin="5,0"/>
+            <Label Content="Предмет:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBox x:Name="CourseFilter" Width="150" Margin="5,0"/>
+            <Label Content="Группа:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBox x:Name="GroupFilter" Width="150" Margin="5,0"/>
+            <Button Content="Фильтровать" Click="FilterButton_Click" Margin="10,0" Background="#FFF79608"/>
+        </StackPanel>
+
+        <DataGrid x:Name="WorkloadDataGrid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="False"
+                  Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Преподаватель" Binding="{Binding Teacher}" />
+                <DataGridTextColumn Header="Предмет" Binding="{Binding Course}" />
+                <DataGridTextColumn Header="Группа" Binding="{Binding GroupName}" />
+                <DataGridTextColumn Header="Нагрузка" Binding="{Binding WeeklyLoad}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Добавить" Width="100" Margin="5" Click="AddButton_Click" Background="#FFF79608"/>
+            <Button Content="Удалить" Width="100" Margin="5" Click="DeleteButton_Click" Background="#FFF70808"/>
+            <Button Content="Редактировать" Width="100" Margin="5" Click="EditButton_Click" Background="#FFF79608"/>
+            <Button Content="Сохранить изменения" Width="150" Margin="5" Click="SaveChangesButton_Click" Background="#FFF79608"/>
+            <Button Content="Нагрузка преподавателя" Width="180" Margin="5" Click="ShowTeacherLoadButton_Click" Background="#FFF79608"/>
+            <Button Content="Экспорт в Excel" Click="ExportToExcel" Margin="5" Background="#FFF79608"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

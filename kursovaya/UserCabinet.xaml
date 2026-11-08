@@ -1,0 +1,10 @@
+﻿<Window x:Class="kursovaya.UserCabinet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Кабинет пользователя" Height="300" Width="400">
+    <Grid>
+        <TextBlock Text="Добро пожаловать!" FontSize="18" HorizontalAlignment="Center" Margin="0,40,0,0"/>
+
+        <Button Content="Распределение нагрузки" Width="200" Height="30" Margin="0,100,0,0" HorizontalAlignment="Center" Click="OpenWorkload_Click" Background="#FFF79608"/>
+    </Grid>
+</Window>

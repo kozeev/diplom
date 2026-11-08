@@ -1,0 +1,33 @@
+﻿<Window x:Class="kursovaya.EditWorkloadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование нагрузки" Height="431" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <Label Content="Преподаватель:"/>
+            <TextBox x:Name="TeacherTextBox" Margin="0,5,0,10"/>
+
+            <Label Content="Предмет:"/>
+            <TextBox x:Name="CourseTextBox" Margin="0,5,0,10"/>
+
+            <Label Content="Группа:"/>
+            <TextBox x:Name="GroupTextBox" Margin="0,5,0,10"/>
+
+            <Label Content="Нагрузка:"/>
+            <TextBox x:Name="WorkloadPerWeekTextBox" Margin="0,5,0,10"/>
+
+          
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="Сохранить" Width="100" Margin="10,0" Click="SaveButton_Click" Background="#FFF79608"/>
+            <Button Content="Отмена" Width="100" Margin="10,0" Click="CancelButton_Click" Background="#FFF79608"/>
+        </StackPanel>
+    </Grid>
+</Window>

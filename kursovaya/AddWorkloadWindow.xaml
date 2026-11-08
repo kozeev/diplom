@@ -1,0 +1,29 @@
+﻿<Window x:Class="kursovaya.AddWorkloadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление нагрузки" Height="350" Width="400" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Преподаватель:" Grid.Row="0" Margin="0,5"/>
+        <TextBox x:Name="TeacherTextBox" Grid.Row="0" Margin="120,5,0,5" Width="230" HorizontalAlignment="Left"/>
+
+        <Label Content="Предмет:" Grid.Row="1" Margin="0,5"/>
+        <TextBox x:Name="CourseTextBox" Grid.Row="1" Margin="120,5,0,5" Width="230" HorizontalAlignment="Left"/>
+
+        <Label Content="Группа:" Grid.Row="2" Margin="0,5"/>
+        <TextBox x:Name="GroupTextBox" Grid.Row="2" Margin="120,5,0,5" Width="230" HorizontalAlignment="Left"/>
+
+        <Label Content="Нагрузка:" Grid.Row="3" Margin="0,5"/>
+        <TextBox x:Name="WeeklyLoadTextBox" Grid.Row="3" Margin="120,5,0,5" Width="230" HorizontalAlignment="Left"/>
+
+        <Button Content="Добавить" Grid.Row="4" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,10,0,0" Click="AddButton_Click" Background="#FFF79608" BorderBrush="White" Foreground="Black"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="kursovaya.registr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursovaya"
+        mc:Ignorable="d"
+        Title="Приложение управления нагрузкой преподавателей" Height="550" Width="900">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="739*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="Resource/logo.jpg" Width="50" Height="70" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Фамилия:" Grid.Row="3" Margin="282,45,457,402" Grid.Column="1" FontSize="14" FontWeight="Bold"/>
+        <TextBox Name="txtLastName" Grid.Row="3" Margin="282,74,363,370" Grid.Column="1"/>
+        <Label Content="Пароль:" Grid.Row="3" Margin="282,237,470,204" Grid.Column="1" FontSize="14" FontWeight="Bold"/>
+        <PasswordBox Name="txtPassword" Grid.Row="3" Margin="283,272,363,175" Grid.Column="1"/>
+        <Label Grid.Column="1" Content="Регистрация" HorizontalAlignment="Left" Margin="302,6,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Button Grid.Column="1" Content="Регистрация" HorizontalAlignment="Left" Margin="267,324,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="22" Height="60" Width="218" Click="BtnRegister_Click" Background="#FFF79608"/>
+        <Label Grid.Column="1" Content="Имя:" HorizontalAlignment="Left" Margin="282,107,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="79"/>
+        <TextBox Name="txtFirstName" Grid.Row="3" Margin="282,141,363,304" Grid.Column="1"/>
+        <Label Grid.Column="1" Content="Логин:" HorizontalAlignment="Left" Margin="282,172,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="79"/>
+        <TextBox Name="txtUsername" Grid.Row="3" Margin="282,205,363,239" Grid.Column="1"/>
+        <Button Grid.Column="1" Content="Назад" HorizontalAlignment="Left" Margin="718,0,0,0" VerticalAlignment="Center" Background="#FFF79608" FontSize="16" Width="84" Click="Button_Click"/>
+    </Grid>
+</Window>
